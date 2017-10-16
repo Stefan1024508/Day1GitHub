@@ -1,0 +1,36 @@
+Git command:
+1,git status
+2,git diff
+3,git checkout -- .
+4,git checkout
+5,git log
+6,git commit -m "Happy Children's day to you"
+7,git add -A
+8,git init (新仓库初始化，在本地某个路径下右键：Git bash here)
+9,git reset --hard 463efd1(版本回退)
+HEAD is now at 463efd1 Happy Children's day
+10,git clean -xf(删除新加的文件，删除当前目录下所有没有track过的文件！)
+11,git config --global core.quotepath false(解决中文乱码问题)
+12,本地配置用户名和邮箱
+	git config --global user.name "你的用户名"
+	git config --global user.email "你的邮箱"
+13,生成ssh key 
+	ssh-keygen -t rsa -C "你的邮箱"
+14,将生成的ssh key复制到剪切板
+	clip < ~/.ssh/id_rsa.pub
+15,本地Git和Github的连接
+	ssh -T git@github.com
+	
+	对于 oschina 的 “码云” ，执行 ssh -T git@git.oschina.net
+	对于 coding 的 “码市” ，执行 ssh -T git@git.coding.net
+
+16,创建远程仓库并与本地关联
+	16.1 在右上角点击：New repository
+	16.2 输入远程仓库名
+	16.3 将远程仓库和本地仓库关联起来
+		16.3.1 在Github上复制远程仓库的SSH地址
+		16.3.2 运行git remote add origin https://github.com/Stefan1024508/Day1GitHub.git/
+		16.3.3 注意：[如果你在创建 repository 的时候，加入了 README.md 或者 LICENSE ，那么 github 会拒绝你的 push 。你需要先执行 git pull origin master]
+		16.3.4 执行：git push -u origin master ,至此关联完成
+
+		
